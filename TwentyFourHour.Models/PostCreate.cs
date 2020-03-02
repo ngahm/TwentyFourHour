@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TwentyFourHour.Models
 {
-    public class CreatePost
+    public class PostCreate
     {
     }
 }
