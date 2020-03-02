@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace TwentyFourHour.Models
 {
-    public class Like
+    public class CreatePost
     {
-        public Post LikedPost { get; set; }
-        public User Liker { get; set; }
     }
 }

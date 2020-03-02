@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace TwentyFourHour.Models
 {
-    public class Comment
+    public class CommentDetail
     {
-        public string Text { get; set; }
-        public User Author { get; set; }
-        public Post CommentPost { get; set; }
     }
 }

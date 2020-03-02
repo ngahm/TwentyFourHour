@@ -54,11 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Comment.cs" />
-    <Compile Include="Like.cs" />
-    <Compile Include="Post.cs" />
-    <Compile Include="Reply.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="CommentDetail.cs" />
+    <Compile Include="CommentListItem.cs" />
+    <Compile Include="CreateComment.cs" />
+    <Compile Include="CreatePost.cs" />
+    <Compile Include="PostDetail.cs" />
+    <Compile Include="PostListItems.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
