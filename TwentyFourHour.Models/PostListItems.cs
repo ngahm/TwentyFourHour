@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace TwentyFourHour.Models
 {
-    public class User
+    public class PostListItems
     {
-        public Guid ID { get; set; }
-        public string Name { get; set; }
-        public string Email { get; set; }
     }
 }
