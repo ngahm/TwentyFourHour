@@ -21,39 +21,69 @@ namespace TwentyFourHour.Services
 
         public bool CreatePost(PostCreate model)
         {
-            var entity = new PostService()
+            var entity = new Post()
             {
-                OwnerId = _userId,
                 Title = model.Title,
-                Text = model.Text
+                Text = model.Title,
+                AuthorID = model.AuthorID
             };
 
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.Posts.Add(entity);
+                ctx.Post.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
         }
 
-        public IEnumerable<PostListItems> GetComments()
+        //GET POSTS
+        public IEnumerable<PostListItems> GetPosts()
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query = 
-                    ctx.Comments
-                    .Where(e => e.OwnerId == _userId)
-                    .Select(e => new CommentListItem
+                    ctx.Post.Where
+                    (e => e.AuthorID == _userId)
+                    .Select(e => new PostListItems
                     {
-                        
-                    })
+                        ID = e.ID,
+                        Title = e.Title,
+                        AuthorID = e.AuthorID
+                    }
+                    );
+                return query.ToArray();
             }
         }
 
-
-        //GET POSTS
-
-
-
         //GET POST BY ID
+        public PostDetail GetPostById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx.Post
+                    .Single(e => e.ID == id && e.AuthorID == _userId);
+                return
+                    new PostDetail
+                    {
+                        ID = entity.ID,
+                        Title = entity.Title,
+                        Text = entity.Text,
+                        AuthorID = entity.AuthorID,
+                        Author = entity.Author
+                    };
+            }
+        }
+
+        public bool DeletePost(int postId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx.Post
+                    .Single(e => e.ID == postId && e.AuthorID == _userId);
+
+                ctx.Post.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace TwentyFourHour.Models
     {
         public int Id { get; set; }
 
-        public int AuthorID { get; set; }
+        public Guid AuthorID { get; set; }
 
         public int CommentPostID { get; set; }
     }

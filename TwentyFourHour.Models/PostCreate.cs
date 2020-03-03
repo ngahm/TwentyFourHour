@@ -20,7 +20,7 @@ namespace TwentyFourHour.Models
         [MaxLength(8000)]
         public string Text { get; set; }
         [Required]
-        public int AuthorID { get; set; }
+        public Guid AuthorID { get; set; }
 
     }
 }

@@ -18,7 +18,7 @@ namespace TwentyFourHour.Data
         public string Text { get; set; }
         [ForeignKey(nameof(Author))]
         [Required]
-        public int AuthorID { get; set; }
+        public Guid AuthorID { get; set; }
         public virtual User Author { get; set; }
     }
 }
