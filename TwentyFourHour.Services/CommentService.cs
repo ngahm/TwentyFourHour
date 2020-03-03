@@ -72,7 +72,7 @@ namespace TwentyFourHour.Services
                         Text = entity.Text,
                         AuthorID = entity.AuthorID,
                         CommentPostID = entity.CommentPostID,
-                        CommentPost = entity.CommentPost
+                        CommentPostName = entity.CommentPost.Title
                     };
             }
         }
