@@ -36,7 +36,50 @@ namespace TwentyFourHour.Services
         }
 
         //GETALL
+        public IEnumerable<ReplyListItem> GetReplies()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query = ctx
+                    .Reply
+                    .Where(e => e.AuthorID == _userId)
+                    .Select(
+                    e =>
+                        new ReplyListItem
+                        {
+                            CommentID = e.CommentID,
+                            AuthorID = e.AuthorID,
+                            ReplyCommentID = e.ReplyCommentID,
+                            CommentPostID = e.CommentPostID
+                        }
+                    );
+                return query.ToArray();
+            }
 
+        }
         //GET BY ID
+        public ReplyDetail GetReplyById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                ctx
+                    .Reply
+                    .Single(e => e.CommentID == id && e.AuthorID == _userId);
+                return
+                    new ReplyDetail
+                    {
+                        CommentID = entity.CommentID,
+                        Text = entity.Text,
+                        AuthorID = entity.AuthorID,
+                        Author = entity.Author,
+                        ReplyCommentID = entity.ReplyCommentID,
+                        ReplyComment = entity.ReplyComment,
+                        CommentPostID = entity.CommentPostID,
+                        CommentPost = entity.CommentPost
+
+                    };
+            }
+        }
     }
 }

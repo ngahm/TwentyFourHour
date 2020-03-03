@@ -12,7 +12,7 @@ namespace TwentyFourHour.Models
         [Required]
         public int LikePostID { get; set; }
        [Required]
-        public int LikerID { get; set; }
+        public Guid LikerID { get; set; }
 
     }
 }
