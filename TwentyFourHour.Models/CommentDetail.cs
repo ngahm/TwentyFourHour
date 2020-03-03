@@ -13,7 +13,7 @@ namespace TwentyFourHour.Models
 
         public string Text { get; set; }
 
-        public int AuthorID { get; set; }
+        public Guid AuthorID { get; set; }
         public virtual User Author { get; set; }
 
         public int CommentID { get; set; }
