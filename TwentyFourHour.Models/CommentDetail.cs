@@ -17,6 +17,6 @@ namespace TwentyFourHour.Models
         public virtual User Author { get; set; }
 
         public int CommentPostID { get; set; }
-        public virtual Post CommentPost { get; set; }
+        public string CommentPostName { get; set; }
     }
 }
