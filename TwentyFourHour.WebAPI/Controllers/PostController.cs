@@ -13,7 +13,6 @@ namespace TwentyFourHour.WebAPI.Controllers
   
     public class PostController : ApiController
     {
-
         private PostService CreatePostService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
