@@ -13,6 +13,6 @@ namespace TwentyFourHour.Models
 
         public int AuthorID { get; set; }
 
-        public int CommentID { get; set; }
+        public int CommentPostID { get; set; }
     }
 }
