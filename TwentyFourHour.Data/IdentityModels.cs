@@ -51,6 +51,7 @@ namespace TwentyFourHour.Data
                 .Configurations
                 .Add(new IdentityUserLoginConfiguration())
                 .Add(new IdentityUserRoleConfiguration());
+               
         }
     }
 
