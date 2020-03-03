@@ -11,14 +11,14 @@ namespace TwentyFourHour.Data
     public class Comment
     {
         [Key]
-        public int Id { get; set; }
+        public int CommentID { get; set; }
         [Required]
         public string Text { get; set; }
         [ForeignKey(nameof(Author))]
-        public int AuthorID { get; set; }
+        public Guid AuthorID { get; set; }
         public virtual User Author { get; set; }
         [ForeignKey(nameof(CommentPost))]
-        public int CommentID { get; set; }
+        public int CommentPostID { get; set; }
         public virtual Post CommentPost { get; set; }
     }
 }
