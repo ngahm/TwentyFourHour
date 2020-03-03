@@ -9,15 +9,10 @@ namespace TwentyFourHour.Models
 {
     public class CommentListItem
     {
-   
         public int Id { get; set; }
 
-        public string Text { get; set; }
-
         public int AuthorID { get; set; }
-        public virtual User Author { get; set; }
 
-        public int CommentID { get; set; }
-        public virtual Post CommentPost { get; set; }
+        public int CommentPostID { get; set; }
     }
 }

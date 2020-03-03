@@ -9,14 +9,13 @@ namespace TwentyFourHour.Models
 {
     public class CommentCreate
     {
-        [Key]
-        public int Id { get; set; }
+
         [Required]
         [MaxLength(8000)]
         public string Text { get; set; }
         [Required]
         public int AuthorID { get; set; }
         [Required]
-        public int CommentID { get; set; }
+        public int CommentPostID { get; set; }
     }
 }
