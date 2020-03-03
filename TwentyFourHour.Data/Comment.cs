@@ -11,7 +11,7 @@ namespace TwentyFourHour.Data
     public class Comment
     {
         [Key]
-        public int ID { get; set; }
+        public int CommentID { get; set; }
         [Required]
         public string Text { get; set; }
         [ForeignKey(nameof(Author))]

@@ -47,7 +47,7 @@ namespace TwentyFourHour.Services
                             e =>
                                 new CommentListItem
                                 {
-                                    CommentID = e.CommentId,
+                                    CommentID = e.CommentID,
                                     AuthorID = e.AuthorID,
                                     CommentPostID= e.CommentPostID
                                 }
@@ -64,15 +64,14 @@ namespace TwentyFourHour.Services
                 var entity =
                     ctx
                         .Comment
-                        .Single(e => e.CommentID == id && e.ID == _userId);
+                        .Single(e => e.CommentID == id && e.AuthorID == _userId);
                 return
                     new CommentDetail
                     {
                         CommentID = entity.CommentID,
                         Text = entity.Text,
                         AuthorID = entity.AuthorID,
-                        CommentID = entity.CommentID,
-                        CommentPostID = entity.CommentPostID
+                        CommentPostID = entity.CommentPostID,
                         CommentPost = entity.CommentPost
                     };
             }
