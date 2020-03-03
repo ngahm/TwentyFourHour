@@ -76,8 +76,7 @@ namespace TwentyFourHour.Services
                         ReplyCommentID = entity.ReplyCommentID,
                         ReplyComment = entity.ReplyComment,
                         CommentPostID = entity.CommentPostID,
-                        //CommentPost = entity.CommentPost.Title
-
+                        CommentPostName = entity.CommentPost.Title
 
                     };
             }
