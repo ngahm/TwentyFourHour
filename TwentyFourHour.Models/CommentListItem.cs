@@ -9,7 +9,7 @@ namespace TwentyFourHour.Models
 {
     public class CommentListItem
     {
-        public int Id { get; set; }
+        public int CommentID { get; set; }
 
         public Guid AuthorID { get; set; }
 
