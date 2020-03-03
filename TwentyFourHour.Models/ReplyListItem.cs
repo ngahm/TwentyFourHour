@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace TwentyFourHour.Models
 {
-    public class ReplyListItem
+    public class ReplyListItem:CommentListItem
     {
+        public int ReplyCommentID { get; set; }
     }
 }
