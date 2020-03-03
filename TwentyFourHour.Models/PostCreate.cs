@@ -6,19 +6,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TwentyFourHour.Data
+namespace TwentyFourHour.Models
 {
-    public class Comment
+
+    public class PostCreate
+
     {
-        [Key]
-        public int Id { get; set; }
         [Required]
+        [MinLength(2, ErrorMessage = "Please enter at least 2 characters.")]
+        [MaxLength(100, ErrorMessage = "There are too many characters in this field.")]
+        public string Title { get; set; }
+        [Required]
+        [MaxLength(8000)]
         public string Text { get; set; }
-        [ForeignKey(nameof(Author))]
+        [Required]
         public int AuthorID { get; set; }
-        public virtual User Author { get; set; }
-        [ForeignKey(nameof(CommentPost))]
-        public int CommentID { get; set; }
-        public virtual Post CommentPost { get; set; }
+
     }
 }

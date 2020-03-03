@@ -4,9 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TwentyFourHour.Data
+namespace TwentyFourHour.Services
 {
-    public class Class1
+    public class ReplyService
     {
+        //Post
+
+        //GETALL
+
+        //GET BY ID
     }
 }

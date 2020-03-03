@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace TwentyFourHour.Models
 {
-    public class PostListItems
+    public class ReplyListItem:CommentListItem
     {
-        public int ID { get; set; }
-        public string Title { get; set; }
-        public int AuthorID { get; set; }
-
+        public int ReplyCommentID { get; set; }
     }
 }

@@ -4,9 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TwentyFourHour.Models
+namespace TwentyFourHour.Services
 {
-    public class CreateComment
+    public class LikeService
     {
+        //POST
+
+        //GET ALL
+
+        //GET BY ID
+
     }
 }
