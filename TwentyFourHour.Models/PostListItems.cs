@@ -8,5 +8,9 @@ namespace TwentyFourHour.Models
 {
     public class PostListItems
     {
+        public int ID { get; set; }
+        public string Title { get; set; }
+        public int AuthorID { get; set; }
+
     }
 }
